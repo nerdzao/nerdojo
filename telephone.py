@@ -17,8 +17,7 @@ number_pad = {
 
 def translate_telephone(word):
     result = []
-    
-    for character in word:
+    for character in word.upper():
         added = False
         for key, value in number_pad.items():
             if character in key:
@@ -29,8 +28,14 @@ def translate_telephone(word):
             result.append(character)
     return ''.join(str(element) for element in result)
 
-print(translate_telephone("1-HOME-SWEET-HOME "))
-print("Expected: 1-4663-79338-4663 ")
 
-print(translate_telephone("MY-MISERABLE-JOB"))
-print("Expected: 69-647372253-562")
+cases = ["1-HOME-SWEET-HOME","MY-MISERABLE-JOB", "MY-MISERABLE-JOB".lower()]
+
+expected_answers = ["1-4663-79338-4663","69-647372253-562", "69-647372253-562"]
+
+
+for case, answer in zip(cases, expected_answers):
+    print("Analised following case: {}".format(case))
+    print("Obtained following answer: {}".format(translate_telephone(case)))
+    print("Expected answer : {}".format(answer))
+    print("\n"*1)
