@@ -1,0 +1,44 @@
+:host {
+    margin: 16px;
+    display: block;
+}
+
+.stats {
+    display: flex;
+
+    .stats-jogador {
+        width: 50%;
+        border: 1px solid silver;
+        margin: 6px;
+        padding: 0 5px;
+    }
+}
+
+.jogador-ativo {
+    .cartas {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .carta {
+            width: 100px;
+            border: 1px solid silver;
+            margin: 4px 16px;
+            border-radius: 10px;
+            cursor: pointer;
+
+            &.selecionado {
+                box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+                border-color: green;
+            }
+        }
+    }
+}
+
+button {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    margin: 4px;
+}
