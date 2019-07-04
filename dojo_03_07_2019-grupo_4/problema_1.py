@@ -52,12 +52,12 @@ unes = {'0': '',
 
 mils = {'0': '',
         '1': 'mil',
-        '2': 'milhoes',
-        '3': 'bilhoes',
-        '4': 'trilhos'}
+        '2': 'milhao(es)',
+        '3': 'bilhao(es)',
+        '4': 'trilhao(es)'}
 
 
-valor = '20,20'
+valor = '127,17'
 reais, centavos = valor.split(',')
 num_digitos = len(reais)
 
