@@ -3,11 +3,9 @@
 Seja bem vindo ao Nerdzão Dojo 3ª Etapa! Se você está participando deste evento presencialmente já conhece as regras :)
 Após a resolução dos desafios o time terá até o encerramento deste dojo para nos enviar seu `Pull Request`. Não precisa fazer todos, faça todos que puder.
 
-Neste diretório que você está existe uma pasta chamada `group-0`, dentro dela você encontrará um `README` com as instruções de como nos enviar seu código. É importante que envie neste formato para que possamos aprovar seu `PR` ok?
-
 Se chegou aqui depois do evento fique a vontade para resolver esses desafios, lá embaixo você vai encontrar as respostas, cuidado para não tomar spoilers ;)
 
-### Bom sorte a todos e **Let the Games Begin!**
+### Boa sorte a todos e **Let the Games Begin!**
 
 - [Como enviar seu código](#como-enviar-seu-código)
 - [Desafios](#desafios)
