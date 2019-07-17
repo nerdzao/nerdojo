@@ -1,10 +1,3 @@
----
-name: Template de Pull Request DESAFIO
-about: Template para ser utilizado ao solicitar um novo Pull Request de DESAFIO
-title: "[challenge] - #<Numero da Esquipe>"
-
----
-
 # #<Numero da Esquipe>
 
 Informações importantes!
