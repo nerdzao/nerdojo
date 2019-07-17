@@ -1,37 +1,39 @@
-## Welcome to GitHub Pages
+![Coding Dojo](https://i.ibb.co/7rnGCNd/photo-2019-07-17-13-12-01.jpg)
 
-You can use the [editor on GitHub](https://github.com/nerdzao/nerdojo/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+# Nerdzão Coding Dojo
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## O que é?
+Coding Dojo é uma forma de treinar e aprender habilidades em desenvolvimento de sistemas.
+Utilizamos o formato **KATA**.
+Nesse formato vamos apresentar o desafio e apresentar a proposta de solução (sem mostrar o código), e reunir as pessoas em equipes. Entre essas equipes o pessoal desenvolve a ideia que vai solucionar o problema demonstrado no início.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Quando terminar o processo a equipe leva o código para validação e assim que acharmos a equipe com o código finalizado, funcionando. Iniciamos a etapa de discussão, onde a equipe vencedora explica o processo de criação. Na sequência as outras equipes estão livre para comentar os seus processos de criação, acrescentando pontos na discussão.
 
-```markdown
-Syntax highlighted code block
+É importante lembrar que, mesmo que você esteja apenas começando, o requisito mínimo para participar é lógica de programação. Os problemas mostrados não são casos reais de empresas, mas sim desafios de programação.
 
-# Header 1
-## Header 2
-### Header 3
+## Requisitos
 
-- Bulleted
-- List
+- Lógica de Programação (Qualquer nível, mas se preferir verificar se está realmente preparadx tente resolver [esse desafio](http://bit.ly/nerdojo-desafio))
+- Notebook, caderno, lapis
+- Vontade de aprender
+- Vontade de ensinar
 
-1. Numbered
-2. List
+## Inscreva-se
 
-**Bold** and _Italic_ and `Code` text
+Faça sua inscrição atraves [desse formulário](https://docs.google.com/forms/d/e/1FAIpQLScX35O5cdkM8FQyq7Y9tnoOErBBs2_82a52qEAi3ldPlCf9Hg/viewform?usp=sf_link)
 
-[Link](url) and ![Image](src)
-```
+Para participar basta acompanhar as nossas publicações nas redes:
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+- [Meetup](https://www.meetup.com/pt-BR/Nerdzao/)
+- [Instagram](https://www.instagram.com/onerdzao/)
+- [Página Facebook](https://www.facebook.com/nerdzao/)
+- [Grupo Facebook](https://www.facebook.com/groups/nerdzao/)
+- [Medium](https://medium.com/nerdzao)
 
-### Jekyll Themes
+## Edições passadas
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/nerdzao/nerdojo/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- [Piloto](http://bit.ly/nerdzao-cd1)
+- [1ª Rodada](http://bit.ly/nerdzao-cd2)
+- [2ª Rodada](http://bit.ly/nerdzao-cd3)
+- [3ª Rodada](http://bit.ly/nerdzao-cd4)
