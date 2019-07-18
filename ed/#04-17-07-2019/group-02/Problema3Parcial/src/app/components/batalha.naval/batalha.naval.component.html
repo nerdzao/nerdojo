@@ -1,0 +1,46 @@
+<h1>
+    Batalha Naval
+</h1>
+
+<p>
+    Campo jogador {{ jogadorAtivo.numero }}:
+</p>
+
+<table class="campo">
+    <tr *ngFor="let linha of jogadorAtivo.campo; let x = index;">
+        <td *ngFor="let c of linha; let y = index;">
+            <button (click)="onCampoClick(x, y)">{{ c }}</button>
+        </td>
+    </tr>
+</table>
+
+<p *ngIf="navioSelecionado">
+    {{ podeInserir ? 'Valido' : 'Invalido' }}
+</p>
+
+<div class="navios">
+    <div *ngFor="let n of jogadorAtivo.navios">
+        <button (click)="onSelecionarNavio(n)">
+            Comprimento: {{ n.comprimento }}
+        </button>
+    </div>
+</div>
+
+<div *ngIf="navioSelecionado">
+    <p>
+        Comprimento: {{ navioSelecionado.comprimento }}
+    </p>
+
+    <button (click)="toggleOrientacao()">
+        Mudar orientação para {{ orientacaoAtual === 'horizontal' ? 'vertical' : 'horizontal' }}
+    </button>
+</div>
+
+<div>
+    <p>
+        Ataques realizados:
+    </p>
+    <p *ngFor="let ataque of jogadorAtivo.ataques">
+        X: {{ ataque.x }}, Y: {{ ataque.y }}
+    </p>
+</div>
