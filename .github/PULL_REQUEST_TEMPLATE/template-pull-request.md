@@ -1,20 +1,16 @@
-# #<Numero da Esquipe>
+# Grupo <Número do Grupo> - #<Edição do Dojo> 
 
-Informações importantes!
+## Integrantes
+- Integrante 1
+- Integrante 2
+- Integrante 3
 
-## Nome dos integrantes
+## Desafios concluídos
+- Desafio 1
+- Desafio 3
 
-- Exemplo 1
-- Exemplo 2
-- Exemplo 3
-
-## Quais desafios estão sendo entregues?
-
-- [x] Desafio 1
-- [ ] Desafio 2
-- [ ] Desafio 3
-- [ ] Desafio 4
-- [ ] Desafio 5
+## Desafios incompletos
+- Desafio 2
 
 ## Observações
-Duvidas, reclamações, etc.
+Duvidas, sugestões, reclamações, etc.
