@@ -1,0 +1,40 @@
+<h1>Joguinho</h1>
+
+<h2>Stats</h2>
+<div class="stats">
+    <div *ngFor="let jogador of jogadores; let i = index" class="stats-jogador">
+        <h3>Jogador {{ i + 1 }}</h3>
+        <p><b>HP: </b> {{ jogador.saude }}</p>
+        <p><b>Mana: </b> {{ jogador.manaAtual }}</p>
+        <p><b>Cartas na mão: </b> {{ jogador.cartasNaMao.length }}</p>
+        <p><b>Cartas no baralho: </b> {{ jogador.cartas.length }}</p>
+    </div>
+</div>
+<hr>
+
+<div *ngIf="!vencedor">
+    <h2>Rodada de Jogador {{ nJogadorAtivo }}</h2>
+    <div class="jogador-ativo">
+        <p>
+            <b>Cartas: </b>
+        </p>
+        <div class="cartas">
+            <div class="carta" [ngClass]="{'selecionado': cartaSelecionada === carta}" *ngFor="let carta of jogadorAtivo.cartasNaMao; let i = index" (click)="onSelecionarCarta(carta)">
+                <p>
+                    <b>Mana: </b> {{ carta.mana }}
+                </p>
+            </div>
+        </div>
+    
+        <button (click)="onPassarVez()">Passar a vez</button>
+        <button (click)="onJogarCarta()">Jogar carta</button>
+    </div>
+</div>
+
+<div *ngIf="vencedor">
+    <h2>Jogador {{ vencedor }} venceu!!</h2>
+
+    <p>
+        GG
+    </p>
+</div>

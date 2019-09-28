@@ -25,11 +25,13 @@ Faça sua inscrição atraves [desse formulário](https://docs.google.com/forms/
 
 Para participar basta acompanhar as nossas publicações nas redes:
 
-- [Meetup](https://www.meetup.com/pt-BR/Nerdzao/)
-- [Instagram](https://www.instagram.com/onerdzao/)
-- [Página Facebook](https://www.facebook.com/nerdzao/)
-- [Grupo Facebook](https://www.facebook.com/groups/nerdzao/)
-- [Medium](https://medium.com/nerdzao)
+* [Meetup](https://www.meetup.com/pt-BR/Nerdzao/)
+* [Página Facebook](https://www.facebook.com/nerdzao/)
+* [Grupo Facebook](https://www.facebook.com/groups/nerdzao/)
+* [Nerdgirlz Grupo Facebook](https://www.facebook.com/groups/nerdgirlz/)
+* [Instagram](https://www.instagram.com/onerdzao/)
+* [Medium](https://medium.com/nerdzao)
+* [Twitter](https://twitter.com/onerdzao)
 
 ## Edições passadas
 

@@ -1,0 +1,24 @@
+$tamanhoCelula: 30px;
+
+.campo {
+    border-collapse: collapse;
+    border: 1px solid black;
+    // width: 100%;
+
+    tr {
+        height: $tamanhoCelula;
+
+        td {
+            height: $tamanhoCelula;
+            width: $tamanhoCelula;
+            padding: 0;
+            // border: 1px solid rgba(0, 0, 255, 0.3);
+
+            button {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
