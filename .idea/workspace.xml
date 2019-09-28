@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c890d885-63c8-43db-b2d1-3e9ba82050f2" name="Default Changelist" comment="" />
+    <list default="true" id="c890d885-63c8-43db-b2d1-3e9ba82050f2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ed/#05-27-09-2019/wrapper.py" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,10 +13,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ed/wrapper.py">
+        <entry file="file://$PROJECT_DIR$/ed/#05-27-09-2019/group-02/01 - Args.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+            <state relative-caret-position="220">
+              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -35,6 +37,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ed/wrapper.py" />
+        <option value="$PROJECT_DIR$/ed/#05-27-09-2019/wrapper.py" />
+        <option value="$PROJECT_DIR$/ed/#05-27-09-2019/group-02/01 - Args.py" />
       </list>
     </option>
   </component>
@@ -61,6 +65,19 @@
               <item name="nerdojo" type="462c0819:PsiDirectoryNode" />
               <item name="ed" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="nerdojo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nerdojo" type="462c0819:PsiDirectoryNode" />
+              <item name="ed" type="462c0819:PsiDirectoryNode" />
+              <item name="#05-27-09-2019" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nerdojo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nerdojo" type="462c0819:PsiDirectoryNode" />
+              <item name="ed" type="462c0819:PsiDirectoryNode" />
+              <item name="#05-27-09-2019" type="462c0819:PsiDirectoryNode" />
+              <item name="group-02" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -72,6 +89,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Breno\Documents\MEU\dojo nerdzao\nerdojo\ed\#05-27-09-2019" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Breno\Documents\MEU\dojo nerdzao\nerdojo\ed" />
     </key>
@@ -88,7 +108,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.01 - Args">
+    <configuration name="01 - Args" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="nerdojo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ed/#05-27-09-2019/group-02" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ed/#05-27-09-2019/group-02/01 - Args.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="wrapper (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="nerdojo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ed/#05-27-09-2019" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ed/#05-27-09-2019/wrapper.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="wrapper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="nerdojo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -112,6 +174,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.01 - Args" />
+        <item itemvalue="Python.wrapper (1)" />
         <item itemvalue="Python.wrapper" />
       </list>
     </recent_temporary>
@@ -153,10 +217,24 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ed/wrapper.py">
+    <entry file="file://$PROJECT_DIR$/ed/#05-27-09-2019/wrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        <state relative-caret-position="274">
+          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ed/#05-27-09-2019/group-02/wrapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ed/#05-27-09-2019/group-02/01 - Args.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
         </state>
       </provider>
     </entry>
