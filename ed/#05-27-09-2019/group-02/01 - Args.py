@@ -1,9 +1,6 @@
-
-
-
 def read_CLI(input):
     input_list = input.split()
-    print(input_list)
+    # print(input_list)
     if "-l" in input_list:
         print("log TRUE")
     else:
@@ -16,7 +13,9 @@ def read_CLI(input):
             print("-p mal formatado")
         else:
             print("Porta selecionada - {}".format(input_list[pos + 1]))
-    
+    else:
+        print("Sem parametro de porta informado")
+
     if "-d" in input_list:
         pos = input_list.index("-d")
         path = ""
@@ -25,8 +24,6 @@ def read_CLI(input):
                 break
             else:
                 path += input_list[i]
-        print("O caminho definido é {}".format(path))
-
-input = "-l -d / usr / logs -p 8080"
-input = "-l -d / usr / logs -p"
-read_CLI(input)
+        print("O caminho definido é {}\n".format(path))
+    else:
+        print("Sem parâmetro de diretório informado\n")

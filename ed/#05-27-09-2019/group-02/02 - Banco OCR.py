@@ -13,7 +13,7 @@ def retornaNumero(string: str):
 
     x = string.split("\n")
 
-    print (x)
+    # print(x)
 
     a = ""
     numero = []
