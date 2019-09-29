@@ -1,34 +1,18 @@
-/**
- * Plano:
- * 
- * 1. Criar uma lista de números grandes de exemplo. Cada item da lista
- *    deverá possuir 1 dígito grande.
- * 
- * 2. Separar o registro em "Linhas grandes". As linhas grandes
- *    são formadas de 4 linhas pequenas, sendo as 3 primeiras
- *    partes do número grande, e a última sendo a linha vazia.
- * 
- * 3. Para cada linha grande, separar as linhas em "Colunas grandes".
- *    Cada coluna grande é formada de 3 colunas pequenas. Isso vai fazer
- *    com que tenhamos uma lista de números grandes.
- * 
- * 4. Comparar os números grandes com a lista criada no passo 1, e transformá-la
- *    em número real.
- * 
- * 5. Printar o resultado de alguns exemplos.
- * 
- * 6. ???
- * 
- * 7. PROFIT!
- *               
- *                            
- */
+export class Entrada {
+    original:       string;
+    linhas:         string[];
+    digitosGrandes: string[][];
+    transformado:   string;
+    valido:         boolean;
+    ilegivel:       boolean;
+    possiveis:      string[];
+}
 
 // Variáveis
 // ------------------------------
-let entradasExemplo: string = `
+export let arquivoExemplo = `
  _  _  _  _  _  _  _  _  _ 
-| || || || || || || || || |
+| || || || || |  || || || |
 |_||_||_||_||_||_||_||_||_|
                            
                            
@@ -47,8 +31,12 @@ let entradasExemplo: string = `
 | || || || || || || ||_   |
 |_||_||_||_||_||_||_| _|  |
                            
+ _                         
+  |  |  |  |  |  |  |  |  |
+  |  |  |  |  |  |  |  |  |
+                           
 `;
-let todosOsDigitos = {
+export let todosOsDigitos = {
     '0': [
         ' _ ',
         '| |',
@@ -121,8 +109,11 @@ let todosOsDigitos = {
  */
 function getNumerosGrandes(registro: string): string[] {
     let linhasGrandesRx = /(.{27}(\n|$)){4}/g;
+    let matches = registro.match(linhasGrandesRx);
 
-    return registro.match(linhasGrandesRx);
+    if (matches === null) return [];
+
+    return matches;
 }
 
 /**
@@ -135,17 +126,18 @@ function getLinhas(numeroGrande: string): string[] {
 
 /**
  * Gera um array com os 9 dígitos grandes contidos na string `numeroGrande`
- * @param numeroGrande O registro com apenas um número grande de até 9 dígitos
+ * @param linhas O registro com apenas um número grande de até 9 dígitos
  */
-function getDigitosGrandes(numeroGrande: string): string[][] {
+function getDigitosGrandes(linhas: string[]): string[][] {
     let digitosGrandes: string[][] = [];
-    let linhas = getLinhas(numeroGrande);
 
     for (let c = 0; c < 9; c++) {
         let digitoGrande: string[] = [];
 
-        linhas.forEach((linha, index) => {
-            digitoGrande.push(linha.match(/.{3}/g)[c]);
+        linhas.forEach(linha => {
+            let matches = linha.match(/.{3}/g);
+
+            if (matches !== null) digitoGrande.push(matches[c]);
         });
 
         digitosGrandes.push(digitoGrande);
@@ -159,7 +151,7 @@ function getDigitosGrandes(numeroGrande: string): string[][] {
  * @param digitoGrande Um array contendo o dígito grande
  */
 function getDigitoDoDigitoGrande(digitoGrande: string[]): string {
-    let numero = '';
+    let numero = '?';
 
     for (let num in todosOsDigitos) {
         let igual = true;
@@ -178,21 +170,33 @@ function getDigitoDoDigitoGrande(digitoGrande: string[]): string {
  * Gera uma string representando os `digitosGrandes`
  * @param digitosGrandes Um array contendo os dígitos grandes
  */
-function getNumeroDosDigitosGrandes(digitosGrandes: string[][]): string {
+export function getNumeroDosDigitosGrandes(digitosGrandes: string[][]): string {
     return digitosGrandes.map(getDigitoDoDigitoGrande).join('');
 }
 
-function getNumerosDoRegistro(registro: string): string[] {
-    let numeros: string [] = [];
+export function getNumerosDoRegistro(registro: string): Entrada[] {
+    let entradas: Entrada[] = [];
 
     getNumerosGrandes(registro).forEach(numeroGrande => {
-        let digitosGrandes = getDigitosGrandes(numeroGrande);
-        
-        numeros.push(getNumeroDosDigitosGrandes(digitosGrandes));
+        let entrada = new Entrada();
+        let linhas = getLinhas(numeroGrande);
+        let digitosGrandes = getDigitosGrandes(linhas);
+        let numero = getNumeroDosDigitosGrandes(digitosGrandes);
+
+        entrada.original = numeroGrande;
+        entrada.linhas = linhas;
+        entrada.digitosGrandes = digitosGrandes;
+        entrada.transformado = numero;
+
+        entradas.push(entrada);
     });
 
-    return numeros;
+    return entradas;
 }
 
-console.clear();
-console.log(getNumerosDoRegistro(entradasExemplo));
+export function logarResposta(entradas: Entrada[]) {
+    entradas.forEach(ent => {
+        console.log(ent.original);
+        console.log(ent.transformado);
+    });
+}

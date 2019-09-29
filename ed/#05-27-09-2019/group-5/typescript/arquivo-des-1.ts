@@ -49,7 +49,7 @@ interface RespostaValidacao {
 // 1º Passo:
 let argsExemplo = '-l -p 4200 -d / usr / logs -g isto, é, uma, lista -r';
 let argsRx = /(-\w)(.*?)(?=(-|$))/g;
-let rxRes: RegExpExecArray;
+let rxRes: RegExpExecArray | null;
 let todosArgs: Args = {};
 
 // 2º Passo:
@@ -117,8 +117,8 @@ for (let sin in todosArgs) {
                 break;
 
             case 'array':
-                argsValidos[sin] = valor.split(/,\s?/);
-                argsValidos[sin] = argsValidos[sin].map(val => val.trim());
+                argsValidos[sin] = valor.split(',');
+                argsValidos[sin] = argsValidos[sin].map((val: string) => val.trim());
                 break;
 
             default:
