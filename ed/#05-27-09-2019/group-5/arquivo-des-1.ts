@@ -1,21 +1,60 @@
-interface Arg {
-    sinalizador: string;
-    valor: any;
+// Interfaces
+// ------------------------------------
+
+interface Args {
+    [sinalizador: string]: any
 }
 
 interface EsquemaArg {
-    tipo: 'string' | 'boolean' | 'inteiro' | 'array';
     sinalizador: string;
+    tipo: 'string' | 'boolean' | 'inteiro' | 'array';
     padrao: any;
 }
 
 interface RespostaValidacao {
-    validos: Arg[];
-    invalidos: Arg[];
+    validos: Args[];
+    invalidos: Args[];
 }
 
-let argsExemplo = '-l -p 8080 -d / usr / logs -g isto, é, uma, lista -r';
+
+
+
+/**
+ * Plano:
+ * 
+ * 1. Pegar do argsExemplo cada sinalizador com seu possível valor.
+ * 
+ * 2. Separar os args válidos dos inválidos em objetos separados.
+ *    Os válidos são os que o sinalizador está nos esquemas e o valor
+ *    atende ao tipo pedido. Inválidos são o resto.
+ * 
+ * 3. Criar um objeto com os args padrões.
+ * 
+ * 4. Sobrepor os args padrões com os válidos.
+ * 
+ * 5. Printar os args válidos e inválidos.
+ * 
+ * 6. ???
+ * 
+ * 7. PROFIT!
+ */
+
+
+
+
+
+// Variáveis
+// ------------------------------------
+
+// 1º Passo:
+let argsExemplo = '-l -p 4200 -d / usr / logs -g isto, é, uma, lista -r';
+let argsRx = /(-\w)(.*?)(?=(-|$))/g;
+let rxRes: RegExpExecArray;
+let todosArgs: Args = {};
+
+// 2º Passo:
 let esquemas: EsquemaArg[] = [
+
     {
         tipo: 'boolean',
         sinalizador: '-l',
@@ -37,80 +76,80 @@ let esquemas: EsquemaArg[] = [
         padrao: []
     }
 ];
+let argsValidos: Args = {};
+let argsInvalidos: Args = {};
 
-function separarArgs(argsString: string): Arg[] {
-    let rx = /(-\w)(.*?)(?=(-|$))/g;
-    let rxRes: RegExpExecArray;
-    let argsSeparados: Arg[] = [];
-    
-    while (rxRes = rx.exec(argsString)) {
-        let sinalizador = rxRes[1];
-        let valor = rxRes[2].trim();
-    
-        argsSeparados.push({
-            sinalizador, valor
-        });
-    }
+// 3º Passo:
+let argsPadrao: Args = {};
 
-    return argsSeparados;
+
+
+
+
+// Lógica
+// ------------------------------------
+
+// 1º Passo
+while (rxRes = argsRx.exec(argsExemplo)) {
+    todosArgs[rxRes[1]] = rxRes[2].trim();
 }
 
-function transformarArgs(args: Arg[]): RespostaValidacao {
-    let res: RespostaValidacao = {
-        validos: [],
-        invalidos: []
-    }
+// 2º Passo
+for (let sin in todosArgs) {
+    let valor = todosArgs[sin];
+    let esq = esquemas.find(esq => esq.sinalizador === sin);
 
-    args.forEach(arg => {
-        let esquema = esquemas.find(esq => esq.sinalizador === arg.sinalizador);
+    if (esq) {
+        
+        switch(esq.tipo) {
+            case 'string':
+                if (valor) argsValidos[sin] = valor;
+                else argsInvalidos[sin] = valor;
+                break;
 
-        if (!esquema) {
-            res.invalidos.push(arg);
-        } else {
+            case 'inteiro':
+                if (isFinite(+valor)) argsValidos[sin] = +valor;
+                else argsInvalidos[sin] = valor;
+                break;
 
-            switch (esquema.tipo) {
-                case 'inteiro':
-                    if (/^\d+$/.exec(arg.valor)) {
-                        arg.valor = +arg.valor;
-                        res.validos.push(arg);
-                    } else {
-                        res.invalidos.push(arg);
-                    }
-                    break;
+            case 'boolean':
+                argsValidos[sin] = true;
+                break;
 
-                case 'boolean':
-                    arg.valor = true;
-                    res.validos.push(arg);
-                    break;
+            case 'array':
+                argsValidos[sin] = valor.split(/,\s?/);
+                argsValidos[sin] = argsValidos[sin].map(val => val.trim());
+                break;
 
-                case 'array':
-                    arg.valor = arg.valor.split(/,\s?/);
-                    res.validos.push(arg);
-                    break;
-
-                case 'string':
-                    res.validos.push(arg);
-                    break;
-
-                default:
-                    res.invalidos.push(arg);
-            }
-
+            default:
+                argsInvalidos[sin] = valor;
+                break;
         }
-    });
 
-    return res;
+    } else {
+        argsInvalidos[sin] = valor;
+    }
 }
 
-function log(): void {
-    let argsSeparados = separarArgs(argsExemplo);
-    let argsTransformados = transformarArgs(argsSeparados);
+// 3º Passo
+esquemas.forEach(esq => {
+    argsPadrao[esq.sinalizador] = esq.padrao;
+});
 
-    console.log('============VALIDOS============');
-    console.table(argsTransformados.validos);
+// 4º Passo
+argsValidos = {
+    ...argsPadrao,
+    ...argsValidos
+};
 
-    console.log('============INVALIDOS============');
-    console.table(argsTransformados.invalidos);
-}
+// 5º Passo
+console.log('============================Args============================');
+console.log(argsExemplo, '\n\n\n');
 
-log();
+console.log('===========================Válidos==========================');
+console.table(JSON.stringify(argsValidos, null, 4));
+console.log('\n\n\n');
+
+console.log('==========================Inválidos=========================');
+console.table(JSON.stringify(argsInvalidos, null, 4));
+console.log('\n\n\n');
