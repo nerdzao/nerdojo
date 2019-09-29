@@ -11,7 +11,8 @@
 - Desafio 1
 - Desafio 2
 - Desafio 3
+- Desafio 4
 
 ## Desafios incompletos
-- Desafio 4
+
 - Desafio 5
