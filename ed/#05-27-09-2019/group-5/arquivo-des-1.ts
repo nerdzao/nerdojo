@@ -140,16 +140,16 @@ esquemas.forEach(esq => {
 argsValidos = {
     ...argsPadrao,
     ...argsValidos
-};
+}; 
 
 // 5º Passo
 console.log('============================Args============================');
-console.log(argsExemplo, '\n\n\n');
+console.log(argsExemplo, '\n');
 
 console.log('===========================Válidos==========================');
 console.table(JSON.stringify(argsValidos, null, 4));
-console.log('\n\n\n');
+console.log('\n');
 
 console.log('==========================Inválidos=========================');
 console.table(JSON.stringify(argsInvalidos, null, 4));
-console.log('\n\n\n');
+console.log('\n');
