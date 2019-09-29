@@ -1,7 +1,7 @@
 
 def valida(digitos):
-#digitos = [11] * 9
-#digitos = [ 6, 6,4 , 3, 7, 1, 4 , 9, 5]
+    digitos = [4,5,7,5,0,8,0,0,0]
+    digitos = [11] * 9
     i = 1
     soma = 0
     for x in digitos:
@@ -10,4 +10,4 @@ def valida(digitos):
 
     return bool( soma % 11 == 0)
 
-    
+print(valida(1))

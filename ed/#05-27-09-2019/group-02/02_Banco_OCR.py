@@ -9,6 +9,8 @@ def retornaNumero(string: str):
         if (x == " _   |  |"): return 7
         if (x == " _ |_||_|"): return 8
         if (x == " _ |_| _|"): return 9
+        if (x == " _ |_| _|"): return 9
+        if (x == " _ | ||_|"): return 0
         return "?"
 
     x = string.split("\n")
