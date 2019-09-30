@@ -1,5 +1,6 @@
 def retornaNumero(string: str):
     def num(x):
+        if (x == " _ | ||_|"): return 0
         if (x == "     |  |"): return 1
         if (x == " _  _||_ "): return 2
         if (x == " _  _| _|"): return 3
